@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">    
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+</head>
+<body>
+<form th:action="@{saveUser}" th:object="${user}" method="post">
+<table>
+  
+<tr>    
+<td>First Name: </td>    
+<td><input type="text" th:field="*{fname}"></td>                 
+</tr>  
+
+<tr>    
+<td>Last Name:</td>    
+<td><input type="text" th:field="*{lname}"></td>
+</tr> 
+
+<tr>    
+<td>Email ID:</td>    
+<td><input type="text" th:field="*{email}"></td> 
+</tr>  
+ 
+<tr>    
+<td>Mobile No:</td>    
+<td><input type="number" th:field="*{phno}"></td>    
+</tr> 
+
+<tr>    
+<td></td>    
+<td><input type="submit" value="Submit"></td>    
+</tr> 
+   
+</table>   
+</form> 
+</body>
+</html>
